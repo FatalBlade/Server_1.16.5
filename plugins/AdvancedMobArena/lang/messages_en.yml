@@ -1,0 +1,453 @@
+Help:
+  Coins:
+  - '&2» &a/ama coins add <player> <amount> &7- Add coins to player.'
+  - '&2» &a/ama coins take <player> <amount> &7- Take coins from player.'
+  - '&2» &a/ama coins set <player> <amount> &7- Set coins to player.'
+  Score:
+  - '&2» &a/ama score add <player> <amount> &7- Add score to player.'
+  - '&2» &a/ama score take <player> <amount> &7- Take score from player.'
+  - '&2» &a/ama score set <player> <amount> &7- Set score to player.'
+  Hologram:
+  - '&2» &a/ama hologram add <stat type> [arena] &7- Add a stats hologram at your
+    location.'
+  - '&2» &a/ama hologram remove &7- Remove the nearest hologram.'
+Command:
+  Balance:
+    Desc: Displays your arena balance.
+  Coins:
+    Desc: Shows coins sub-commands.
+    Usage: <add|take|set>
+    Add:
+      Usage: '&cUsage: &f/ama coins add <player> <amount>'
+      Done: '&aAdded &f%coins% Coins to &a%player%''s &fbalance!'
+    Take:
+      Usage: '&cUsage: &f/ama coins take <player> <amount>'
+      Done: '&aTaken &f%coins% Coins from &a%player%''s &fbalance!'
+    Set:
+      Usage: '&cUsage: &f/ama coins set <player> <amount>'
+      Done: '&aSet &a%player%''s &fbalance to &a%coins% Coins&f!'
+  ForceStart:
+    Desc: Force starts the specified arena.
+    Usage: <arena>
+    Done: Force started arena &a%id%&7!
+    Error:
+      NotReady: This arena is not ready to start or already in-game
+  ForceEnd:
+    Desc: Force stops the specified arena.
+    Usage: <arena>
+    Done: Force ended arena &a%id%&7!
+    Error:
+      NotInGame: Arena &c%id% &7is not in game.
+  Holo:
+    Desc: Shows hologram sub-commands.
+    Usage: <add|remove>
+    Remove:
+      Nothing: '&7No holograms in radius of 5 blocks.'
+      Done: '&7Hologram removed!'
+    Add:
+      Usage: '&cUsage: &f/ama hologramm add <stat type> [arena]'
+      Done: '&7Added hologram for &a%type% &7stats!'
+  Join:
+    Desc: Join the specified (or random) arena.
+    Usage: '[arena]'
+    Nothing: No available arenas to join.
+  Region:
+    Desc: Manage in-game arena regions.
+    Usage: <lock|unlock>
+    State:
+      Done: Region &a%region%'s &7lock state to &a%state%&7!
+      Error:
+        NotInGame: '&cYou must be in-game to do that!'
+        InvalidRegion: '&cInvalid region id!'
+  Score:
+    Desc: Manage player's game score.
+    Usage: <add|take|set>
+    Add:
+      Usage: '&cUsage: &f/ama score add <player> <amount>'
+      Done: '&aAdded &f%points% points to &a%player%''s &fscore!'
+    Take:
+      Usage: '&cUsage: &f/ama score take <player> <amount>'
+      Done: '&aTaken &f%points% points from &a%player%''s &fscore!'
+    Set:
+      Usage: '&cUsage: &f/ama score set <player> <amount>'
+      Done: '&aSet &a%player%''s &fscore to &a%score%&f!'
+    Error:
+      NotInGame: '&cThis player is not in game!'
+  Spot:
+    Desc: Manage in-game arena spots.
+    Usage: '[state]'
+    State:
+      Done: Changed &a%spot%'s &7state to &a%state%&7!
+      Error:
+        NotInGame: '&cYou must be in-game to do that!'
+        InvalidSpot: '&cInvalid spot id!'
+        InvalidState: '&cInvalid spot state id!'
+  Leave:
+    Desc: Leave the current arena.
+  List:
+    Desc: Shows arenas list.
+  Skipwave:
+    Desc: Skips current arena wave.
+    Usage: '[amount]'
+  Spectate:
+    Desc: Join as spectator on specified arena.
+    Usage: <arena>
+  Shop:
+    Desc: Open arena shop.
+  Stats:
+    Desc: View your current stats.
+Arena:
+  Error:
+    Disabled: Arena &c%name% &7is disabled.
+    Invalid: Arena &c%id% &7does not exists.
+  Join:
+    Error:
+      Req:
+        Permission: '&cYou don''t have permission to join this arena!'
+        Level: '&cYour level must be at least &e%level% &cto join this arena!'
+        ClearInv: '&cYour inventory must be empty to join this arena!'
+        Money: '&cYou must have &e$%cost% &cto join the arena!'
+      InGame: You are already in game!
+      Maximum: Arena has maximum players.
+      Started: Arena &a%name% &7is already in game. You can not join now.
+    Spectate:
+      Success: Now you are spectating arena &a%name%
+      Error:
+        Disabled: Spectating is disabled on this arena.
+  Game:
+    Notify:
+      Start:
+      - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 40; ~fadeOut: 10;}&a&lYou have
+        joined the arena! '
+      - ' &2&lPickup your weapons and fight!'
+      Reward: 'You recieved reward: &a%reward%'
+    Announce:
+      End: Game on the arena &a%name% &7has ended. Type &a/ama join &a%id% &7to play!
+      Start: Arena &a%name% &7will start in &2%time% &7seconds. Type &a/ama join &a%id%
+        &7to join!
+    Restrict:
+      EnderPearl: Ender pearl is disabled in this arena!
+      Chorus: Chorus is disabled in this arena!
+      Commands: Commands are disabled in this arena. Type &c/ama leave&7 to leave.
+      Kits: Kits are disabled in this arena.
+      NoPets: Pets are not allowed in this arena. Your pet has gone.
+    Lobby:
+      Enter:
+      - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 40; ~fadeOut: 10;}&a&lWelcome
+        to Mob Arena! '
+      - ' &2&lPlease, choose your kit'
+      Timer:
+      - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 40; ~fadeOut: 10;}&e&lThe game
+        will start in '
+      - ' &a&l%time% seconds!'
+      MinPlayers: 'Minimum players to start: &c%min%'
+      Joined: '&a%player% &7has joined the arena.'
+    Death:
+      Lives:
+      - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 40; ~fadeOut: 10;}&4&lYou Died! '
+      - ' &cLives left: &e&lx%lives%'
+      Player: '&c%player% &7died! Players left: &c%players%'
+    Wave:
+      Latest: '&a&lCongrats! &7You just reached the latest arena wave!'
+      Start:
+      - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 40; ~fadeOut: 10;}&6&lWave &e&l#%wave% '
+      - ' &4&lPrepare to fight!'
+      Timer: '{message: ~type: ACTION_BAR;}&4&l&nNew wave in:&e&l %sec% &6&lseconds!'
+      TimerEnd: '{message: ~type: ACTION_BAR;}&b&l&nGame Ends in:&d&l %sec% &b&lseconds!'
+      Progress: '{message: ~type: ACTION_BAR;}&4&lMobs Left: &e&l%mobs%% &8&l| &4&lBosses
+        Left: &e&l%bosses%%'
+  Leave:
+    Error:
+      NotInGame: You are not in game!
+    Success: '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 40; ~fadeOut: 10;}&4You
+      have left the game.'
+  Region:
+    Unlocked:
+      Notify: 'Arena region unlocked: &a%region%&7!'
+    Locked:
+      Notify:
+      - '{message: ~type: TITLES; ~fadeIn: 0; ~stay: 30; ~fadeOut: 10;}&c&lNew Region!'
+      - '&4&lFollow to the next arena region!'
+Coins:
+  Format: Coins
+  Balance: 'Your balance: &a%coins% Coins&7!'
+  Get: You recieved &a%coins% Coins&7!
+  Lost: You have lost &c%coins% Coins&7!
+  Set: Your coins balance has been set to &a%coins% Coins&7!
+Kit:
+  Buy:
+    Error:
+      AlreadyHave: '&c&oYou already have this kit!'
+      NoMoney: You cant afford for &c%kit% &7kit!
+    Success: You successfully bought the kit &a%kit% &7for &a%cost% $&7!
+  Select:
+    Error:
+      Disabled: This kit is disabled in this arena.
+      NotObtained: You don't have this kit!
+      Limit: You can not use this kit, because there is already a maximum allowed
+        number of players with this kit.
+      NoPerm: You dont have permissions to use &c%kit%&7 kit!
+      MissingKit: You must have all the required kits!
+    Success: You choosen &a%kit%&7 as your kit.
+Shop:
+  Notify:
+    NewItems: '&aNew items appeared in the shop!'
+  Buy:
+    Success: You successfully bought &a%item% &7for &a%cost% Coins&7!
+    Error:
+      NoMoney: '&cYou don''t have enough money to buy &e%item%&c!'
+      Locked: '&cThis item is not available yet!'
+      BadKit: '&cThis item is not available for your kit!'
+  Open:
+    Error:
+      InWave: '&cShop is closed until wave end!'
+Holograms:
+  Region:
+    State:
+      List:
+      - '&8[%state%&8] &e%region%'
+      - '&6&lWave Requirement(s): &f%requirement-wave%'
+      - '&6&lScore Requirement(s): &f%requirement-score%'
+      - '&6&lRegion Lock Requirement(s): &f%requirement-region-lock%'
+      - '&6&lRegion Unlock Requirement(s): &f%requirement-region-unlock%'
+      Locked:
+        Name: '&4&lLocked'
+      Unlocked:
+        Name: '&a&lUnlocked'
+  Stats:
+    Header:
+      Orphan: '&8&m━━━━━━━━━━━━&8&l[ &aTopStats for &2%type% &8&l]&8&m━━━━━━━━━━━━'
+      Arena: '&8&m━━━━━━━━━━━━&8&l[ &aTopStats for &2%type% &7in &2%arena% &8&l]&8&m━━━━━━━━━━━━'
+    Line: '&a%pos%. &2%name% &7- &a%score% &7%type%'
+Signs:
+  Join:
+    Header:
+    - '&8[&4MobArena&8]'
+    - '&l> %arena% <'
+    - '&8[%state%&8]'
+    - '&n%players%&8/&r%max%'
+  Kit:
+  - '&2[&aMob Arena&2]'
+  - '%name%'
+  - '&4Price: &c%price% Coins'
+  - '&e&lClick to Select'
+  Stats:
+  - '&4[&c%type%&4]'
+  - '&bTop %pos%'
+  - '&a&l%player%'
+  - '&e&l&n%score%'
+Titles:
+  Leave:
+    Death:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&c&lYou died! '
+    - ' &7&lYou has left the arena.'
+    Finish:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&a&lCongratulations!
+      You finished the arena! '
+    - ' &2&lCheck your inventory for rewards!'
+    Timeleft:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lTime is
+      ended! '
+    - ' &7&lYou has left the arena.'
+    NoRegion:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lNo Regions! '
+    - ' &7&lYou has left the arena.'
+    ForceEnd:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lForce End! '
+    - ' &7&lYou has left the arena.'
+    Outside:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lYou''re
+      out of the arena! '
+    - ' &7&lYou has left the arena.'
+    Self:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lMob Arena '
+    - ' &7&lYou has left the arena.'
+    NoKit:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lYou don''t
+      have a kit! '
+    - ' &7&lYou has left the arena.'
+    Kick:
+    - '{message: ~type: TITLES; ~fadeIn: 10; ~stay: 60; ~fadeOut: 10;}&4&lKICKED! '
+    - ' &7&lYou has left the arena.'
+Editor:
+  Tip:
+    Potions:
+    - '&7'
+    - '&b&lPotion Tips:'
+    - '&7'
+    - '&2• &aFormat: &2<Effect>:<Amplifier>'
+    - '&2• &aEffect List: &2https://hub.spigotmc.org/javadocs/spigot/org/bukkit/potion/PotionEffectType.html'
+    - '&7'
+  Arena:
+    Tip:
+      Create: '&7Enter an arena id...'
+    Error:
+      Exist: '&cArena already exists!'
+    Gameplay:
+      Tip:
+        Timeleft: '&7Enter timeleft (minutes)'
+        LobbyTime: '&7Enter lobby time (seconds)'
+        CoinsMultiplier: '&7Enter coins multiplier'
+        Players:
+          Lives: '&7Enter lives amount'
+          MinMax: '&7Enter players amount'
+        Commands:
+          AddWhite: '&7Enter a command'
+        Kits:
+          AddLimit: '&7Enter a kit limit like: &a2 warrior'
+          AddAllowed: '&7Enter a kit id'
+        AutoCmd:
+          AddNormal: '&7Enter a command'
+          Clear: '{message: ~prefix: false;}&bType &d&lCLEAR &bto remove all commands.'
+      Error:
+        Kits:
+          InvalidKit: '&7Invalid kit!'
+          InvalidLimit: '&7Use format like: &c2 warrior'
+    Waves:
+      Tip:
+        EntityLimit: '&7Enter entity limit...'
+        Delay:
+          First: '&7Enter frist wave delay'
+          Default: '&7Enter default wave delay'
+        FinalWave: '&7Enter final wave'
+        WaveCreate: '&7Enter wave identifier'
+        WaveMobCreate: '&7Enter mob identifier'
+        WaveMobAmount: '&7Enter mob spawn amount'
+        WaveMobChance: '&7Enter mob spawn chance'
+        ProgressionCreate: '&7Enter progression identifier'
+        ProgressionFormula: '&7Enter progression formula'
+      Error:
+        WaveExist: '&7Wave already exist!'
+        WaveMobExist: '&7Wave Mob already exist!'
+        WaveMobInvalid: '&7No such Arena Mob or MythicMob!'
+        ProgressionExist: '&7Progression already exist!'
+    Shop:
+      Tip:
+        ItemCreate: '&7Enter item identifier:'
+        ItemPrice: '&7Enter item price:'
+        ItemCommand: '&7Enter a command:'
+        ItemRequiredKits: '&7Enter kit identifier:'
+      Error:
+        ItemExist: '&7Item already exist!'
+  IR:
+    Priority: '&7Enter new priority'
+    Interval: '&7Enter new interval'
+    Wave: '&7Enter new wave number(s)'
+  Region:
+    Tip:
+      Name: '&7Enter region name...'
+      Wave:
+        Id: '&7Enter arena wave id...'
+        SpawnerId: '&7Enter spawner id...'
+    Wave:
+      Tip:
+        Create: '&7Enter unique wave identifier'
+      Error:
+        Create: '&7Such wave already exist!'
+  Spot:
+    Tip:
+      Name: '&7Enter spot name...'
+  Kit:
+    Tip:
+      Create: '&7Enter kit identifier...'
+      Name: '&7Enter kit name...'
+      Command: '&7Enter kit name...'
+      Potion: '&7Enter potion effect...'
+      ReqMoney: '&7Enter money amount...'
+      ReqKit: '&7Enter kit identifier...'
+    Error:
+      Exist: '&cKit already exists!'
+Setup:
+  Error:
+    Enabled: '&cYou must disable the arena first!'
+  Arena:
+    Name:
+      Set: '&7Defined name: &a%id%'
+    Lobby:
+      Set: '&7Defined lobby location for &a%arena% &7arena!'
+    Leave:
+      Set: '&7Defined leave location for &a%arena% &7arena!'
+      UnSet: '&7Undefined leave location for &a%arena% &7arena!'
+    Spectate:
+      Set: '&7Defined spectate location for &a%arena% &7arena!'
+    Error:
+      Outside: '&cYou''re outside of the any &e%arena% &7arena region!'
+  Region:
+    Spawn:
+      Set: '&7Defined spawn location for &a%region% &7region!'
+    Spawner:
+      Add: '&7Added spawner to &a%region% &7region!'
+      Remove: '&7Removed spawner from &a%region% &7region!'
+    Cuboid:
+      Error:
+        Overlap: '&7This position is overlaps with &c%region% &7arena region!'
+      Set: '&7Set &a#%corner% &7corner for the &a%region% &7region!'
+    Error:
+      NoCuboid: '&cYou must define region cuboid to save it!'
+      NoName: '&cYou must enter region name in chat to save it!'
+      Duplicated: '&cRegion with such id already exists!'
+      Outside: '&cLocation is outside of the editing region!'
+  Reigon:
+    Cuboid:
+      Preview:
+      - '&c&m----------------------------------------'
+      - 'You defined a new region position(s). The following changes will be made:'
+      - '&c▸ &7Mob Spawners Lost: &c%spawners-lost%'
+      - '&c▸ &7Region Containers Lost: &c%containers-lost%'
+      - '&c▸ &7Region Spawn Location Lost: &c%spawn-lost%'
+      - '&7'
+      - If you want to cancel these changes simply use &cExit Tool&7.
+      - '&c&m----------------------------------------'
+  Spot:
+    Start:
+    - '&6&m-------&6&l *** &e&lWelcome to Spot Editor!&6&l *** &6&m-------'
+    - '&eDefine a cuboid arena with &aSpot Cuboid Tool &eto create a spot.'
+    - '&eBuilding is allowed only inside the &cspot area&e.'
+    - '&7'
+    - '&b&lWHEN YOU DONE:'
+    - '&b&l1. &c(For new spots) &eType &aspot name&e in chat to define it.'
+    - '&b&l2. &eUse &aSave Tool&e.'
+    - '&7'
+    Error:
+      Active: '&cPlease disable the spot first.'
+      NoCuboid: '&cYou must define spot cuboid to save it!'
+      NoName: '&cYou must enter spot name in chat to save it!'
+      Duplicated: '&cSpot with such id already exists!'
+    Cuboid:
+      Error:
+        Overlap: '&cThis position is overlaps with &e%spot% &carena spot!'
+      Set: '&7Set &a#%corner% &7corner for the &a%spot% &7spot!'
+    State:
+      Error:
+        NoName: '&cYou must enter state name in chat to save it!'
+        Duplicated: '&cState with such id already exists!'
+        Outside: '&cLocation is outside of the editing spot!'
+      Start:
+      - '&6&m-------&6&l *** &e&lWelcome to State Editor!&6&l *** &6&m-------'
+      - '&eNow you can build or modify another state of the editing spot.'
+      - '&eBuilding is allowed only inside the &cspot area&e.'
+      - '&7'
+      - '&b&lWHEN YOU DONE:'
+      - '&b&l1. &c(For new states) &eType &astate name&e in chat to define it.'
+      - '&b&l2. &eUse &aSave Tool&e.'
+      - '&7'
+      - '&eThere is also preview item that you can use to display the state. &c&l(Only
+        when it''s created and loaded)'
+ArenaState:
+  WAITING: Waiting
+  READY: Ready
+  INGAME: Ingame
+StatType:
+  MOB_KILLS: Mob Kills
+  GAMES_WON: Games Won
+  GAMES_LOST: Games Lost
+  GAMES_PLAYED: Games Played
+  DEATHS: Deaths
+  COINS_SPENT: Coins Spent
+  TNT_EXPLODED: Tnt Exploded
+  ARROWS_LAUNCHED: Arrows Launched
+  POTIONS_DRUNK: Potions Drunk
+  FOOD_EATEN: Food Eaten
+  EQUIPMENT_BROKEN: Equipment Broken
+  WAVES_PASSED: Waves Passed
+  BEST_KILL_STREAK: Best Kill Streak

@@ -1,0 +1,168 @@
+AcidDagger:
+  name: 'AcidDagger'
+  type: 'Damage/Support'
+  max-level: 100
+  skill-req: ''
+  skill-req-lvl: 1
+  needs-permission: 'False'
+  msg: '&6{player} &2has cast &6{skill}'
+  combo: ''
+  indicator: '2D'
+  icon: 'Red mushroom'
+  icon-data: 0
+  icon-lore:
+  - '&d{name} &7({level}/{max})'
+  - '&2Type: &6{type}'
+  - ''
+  - '&7Attacks a single enemy directly in front'
+  - '&7of the Caster, dealing damage, causes'
+  - '&7Poison. Chance to cause piercing'
+  - '&7damage.'
+  - ''
+  - '&bDamage: {attr:dmg.value} Damage &5'
+  - '&bRange: {attr:range.range} Blocks'
+  - '&bHealing Debuff: &6-50&f% for &66 &fSeconds'
+  - '&bPoison: {attr:po.tier} for {attr:po.seconds} Seconds'
+  - ''
+  - '&2Mana: {attr:mana} &2Cooldown: {attr:cooldown}'
+  attributes:
+    level-base: 1
+    level-scale: 0
+    cost-base: 1
+    cost-scale: 0
+    cooldown-base: 10
+    cooldown-scale: 0
+    mana-base: 5
+    mana-scale: 0
+    points-spent-req-base: 0
+    points-spent-req-scale: 0
+    incompatible:
+    - ''
+  components:
+    Cast-a:
+      type: 'trigger'
+      data:
+        icon-key: ''
+      children:
+        Self-b:
+          type: 'target'
+          data:
+            icon-key: ''
+          children:
+            Linear-c:
+              type: 'target'
+              data:
+                icon-key: 'range'
+                range-base: 6
+                range-scale: 0
+                tolerance-base: 20
+                tolerance-scale: 0
+                group: 'Enemy'
+                wall: 'True'
+                caster: 'False'
+                max-base: 1
+                max-scale: 0
+              children:
+                Damage-d:
+                  type: 'mechanic'
+                  data:
+                    icon-key: 'dmg'
+                    counts: 'True'
+                    type: 'Damage'
+                    value-base: 1
+                    value-scale: 0
+                    true: 'False'
+                    classifier: ''
+                    knockback: 'True'
+                Potion-e:
+                  type: 'mechanic'
+                  data:
+                    icon-key: 'po'
+                    counts: 'True'
+                    potion: 'Poison'
+                    ambient: 'True'
+                    tier-base: 2
+                    tier-scale: 0
+                    seconds-base: 6
+                    seconds-scale: 0
+                Repeat-f:
+                  type: 'mechanic'
+                  data:
+                    icon-key: ''
+                    counts: 'True'
+                    repetitions-base: 6
+                    repetitions-scale: 0
+                    period: 1
+                    delay: 0
+                    stop-on-fail: 'False'
+                  children:
+                    Particle-g:
+                      type: 'mechanic'
+                      data:
+                        icon-key: ''
+                        counts: 'True'
+                        particle: 'Slime'
+                        arrangement: 'Circle'
+                        radius-base: 1
+                        radius-scale: 0
+                        particles-base: 5
+                        particles-scale: 0
+                        direction: 'XZ'
+                        visible-radius: 25
+                        dx: 0
+                        dy: 0
+                        dz: 0
+                        amount: 0
+                        speed: 1
+                        forward: 0
+                        upward: 1
+                        right: 0
+                Chance-h:
+                  type: 'condition'
+                  data:
+                    icon-key: ''
+                    chance-base: 90
+                    chance-scale: 0
+                  children:
+                    Damage-i:
+                      type: 'mechanic'
+                      data:
+                        icon-key: ''
+                        counts: 'True'
+                        type: 'Damage'
+                        value-base: 1
+                        value-scale: 1
+                        true: 'True'
+                        classifier: 'default'
+                        knockback: 'False'
+                    Particle-j:
+                      type: 'mechanic'
+                      data:
+                        icon-key: ''
+                        counts: 'True'
+                        particle: 'Crit'
+                        arrangement: 'Circle'
+                        radius-base: 0.5
+                        radius-scale: 0
+                        particles-base: 5
+                        particles-scale: 0
+                        direction: 'XZ'
+                        visible-radius: 25
+                        dx: 0
+                        dy: 0
+                        dz: 0
+                        amount: 1
+                        speed: 0.1
+                        forward: 0
+                        upward: 2
+                        right: 0
+                    Sound-k:
+                      type: 'mechanic'
+                      data:
+                        icon-key: ''
+                        counts: 'True'
+                        sound: 'Entity blaze hurt'
+                        volume-base: 100
+                        volume-scale: 0
+                        pitch-base: 1
+                        pitch-scale: 0

@@ -1,0 +1,343 @@
+name: '%prefix_tier% %prefix_material% %prefix_type% %item_type% %suffix_material%
+  %suffix_type% %suffix_tier%'
+lore:
+- '&7Tier: %TIER_NAME%'
+- '&7Level: &f%ITEM_LEVEL%'
+- '%ITEM_AMMO%'
+- '%ITEM_HAND%'
+- '%ENCHANTS%'
+- ''
+- '%USER_CLASS%'
+- '%USER_LEVEL%'
+- ''
+- '%ITEM_SET%'
+- ''
+- '%GENERATOR_ABILITY%'
+- '%GENERATOR_DEFENSE%'
+- '%GENERATOR_DAMAGE%'
+- '%GENERATOR_STATS%'
+- '%GENERATOR_SOCKETS_GEM%'
+- '%GENERATOR_SOCKETS_ESSENCE%'
+- '%GENERATOR_SOCKETS_RUNE%'
+color: -1,-1,-1
+unbreakable: false
+item-flags:
+- '*'
+tier: junk
+level:
+  min: 1
+  max: 50
+generator:
+  prefix-chance: 100.0
+  suffix-chance: 75.0
+  materials:
+    reverse: false
+    black-list:
+    - DIAMOND*
+    - IRON*
+    - CHAINMAIL*
+    - GOLD*
+    - ELYTRA*
+    - NETHERITE*
+  user-requirements-by-level:
+    level:
+      '1': '1:10'
+      '11': '11:20'
+      '21': 0 + %ITEM_LEVEL%
+  enchantments:
+    minimum: 0
+    maximum: 0
+    safe-only: false
+    list:
+      sharpness: '1:2'
+      knockback: '1:2'
+      efficiency: '1:2'
+      silk_touch: 0:1
+      smite: '1:2'
+    safe-levels: true
+  ammo-types:
+    ARROW: 100.0
+  hand-types:
+    ONE: 70.0
+    TWO: 30.0
+  damage-types:
+    minimum: 1
+    maximum: 1
+    lore-format:
+    - '%DAMAGE_PHYSICAL%'
+    - ''
+    - '%DAMAGE__VANILLA_GENERIC%'
+    - '%DAMAGE_MAGICAL%'
+    - '%DAMAGE_FIRE%'
+    - '%DAMAGE_POISON%'
+    - '%DAMAGE_WATER%'
+    - '%DAMAGE_WIND%'
+    list:
+      physical:
+        chance: 100.0
+        scale-by-level: 1.025
+        min: 1.6
+        max: 3.8
+      _vanilla_generic:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      magical:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      fire:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      poison:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      water:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      wind:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+  defense-types:
+    minimum: 1
+    maximum: 2
+    lore-format:
+    - '%DEFENSE_PHYSICAL%'
+    - ''
+    - '%DEFENSE_MAGICAL%'
+    - '%DEFENSE_FIRE%'
+    - '%DEFENSE_POISON%'
+    - '%DEFENSE_WATER%'
+    - '%DEFENSE_WIND%'
+    list:
+      physical:
+        chance: 100.0
+        scale-by-level: 1.025
+        min: 1.6
+        max: 3.8
+      magical:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      fire:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      poison:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      water:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      wind:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+  item-stats:
+    minimum: 1
+    maximum: 4
+    lore-format:
+    - '%ITEM_STAT_CRITICAL_RATE%'
+    - '%ITEM_STAT_CRITICAL_DAMAGE%'
+    - '%ITEM_STAT_ACCURACY_RATE%'
+    - '%ITEM_STAT_DODGE_RATE%'
+    - '%ITEM_STAT_BLOCK_RATE%'
+    - '%ITEM_STAT_BLOCK_DAMAGE%'
+    - '%ITEM_STAT_LOOT_RATE%'
+    - '%ITEM_STAT_MOVEMENT_SPEED%'
+    - '%ITEM_STAT_ATTACK_SPEED%'
+    - '%ITEM_STAT_MAX_HEALTH%'
+    - '%ITEM_STAT_THORNMAIL%'
+    - '%ITEM_STAT_MANA_REGEN%'
+    - ''
+    - '%ITEM_STAT_DURABILITY%'
+    - ''
+    - '%ITEM_STAT_PVP_DEFENSE%'
+    - '%ITEM_STAT_SALE_PRICE%'
+    - '%ITEM_STAT_PVE_DEFENSE%'
+    - '%ITEM_STAT_DISARM_RATE%'
+    - '%ITEM_STAT_DIRECT_DAMAGE%'
+    - '%ITEM_STAT_PVP_DAMAGE%'
+    - '%ITEM_STAT_PENETRATION%'
+    - '%ITEM_STAT_PVE_DAMAGE%'
+    - '%ITEM_STAT_BLEED_RATE%'
+    - '%ITEM_STAT_BURN_RATE%'
+    - '%ITEM_STAT_VAMPIRISM%'
+    - '%ITEM_STAT_AOE_DAMAGE%'
+    - '%ITEM_STAT_HEALTH_REGEN%'
+    list:
+      critical_rate:
+        chance: 20.0
+        scale-by-level: 0
+        min: -3.0
+        max: -6.25
+      critical_damage:
+        chance: 20.0
+        scale-by-level: 0
+        min: -1.1
+        max: -1.25
+      dodge_rate:
+        chance: 10.0
+        scale-by-level: 0
+        min: -2.5
+        max: -4.0
+      accuracy_rate:
+        chance: 10.0
+        scale-by-level: 0
+        min: -4.5
+        max: -7.5
+      block_rate:
+        chance: 10.0
+        scale-by-level: 0
+        min: -1.5
+        max: -7.0
+      block_damage:
+        chance: 10.0
+        scale-by-level: 0
+        min: -3.0
+        max: -10.0
+      durability:
+        chance: 80.0
+        scale-by-level: 0
+        min: -20.0
+        max: -150.0
+      loot_rate:
+        chance: 7.5
+        scale-by-level: 0
+        min: -1.0
+        max: -5.0
+      movement_speed:
+        chance: 3.5
+        scale-by-level: 0
+        min: -0.5
+        max: -5.0
+      attack_speed:
+        chance: 4.75
+        scale-by-level: 0
+        min: -0.05
+        max: -1.0
+      max_health:
+        chance: 5
+        scale-by-level: 0
+        min: -1.0
+        max: -3.0
+      range:
+        chance: 20.0
+        scale-by-level: 0
+        min: -1.0
+        max: -3.75
+      mana_regen:
+        chance: 5.0
+        scale-by-level: 0.0
+        min: -0.01
+        max: -0.12
+      pvp_defense:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      sale_price:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      pve_defense:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      disarm_rate:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      direct_damage:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      pvp_damage:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      penetration:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      pve_damage:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      bleed_rate:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      thornmail:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      burn_rate:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      vampirism:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      aoe_damage:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+      health_regen:
+        chance: 0.0
+        scale-by-level: 1.0
+        min: '0'
+        max: '0'
+  sockets:
+    GEM:
+      list:
+        common:
+          chance: 0.0
+        rare:
+          chance: 0.0
+      lore-format:
+      - '%SOCKET_GEM_COMMON%'
+      - '%SOCKET_GEM_RARE%'
+    RUNE:
+      list:
+        default:
+          chance: 0.0
+      lore-format:
+      - '%SOCKET_RUNE_DEFAULT%'
+    ESSENCE:
+      list:
+        default:
+          chance: 0.0
+      lore-format:
+      - '%SOCKET_ESSENCE_DEFAULT%'
+target-requirements: {}

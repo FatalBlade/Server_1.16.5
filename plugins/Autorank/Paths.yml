@@ -1,0 +1,218 @@
+# Paths file - This file will contain all paths that a player is allowed to take. Previously known as 'AdvancedConfig.yml'.
+# This file contains (by default) a Test group that shows the basic syntax of this file. 
+# For more information, go to https://github.com/Armarr/Autorank-2/wiki/How-to-configure-the-Paths.yml-file%3F.
+peasant:
+  prerequisites:
+    in group:
+      value: peasant
+  requirements:
+    in group:
+      value: neophyte
+  results:
+    command: say &p just got a promotion; broadcast &p has just been promoted to Member!
+    message: Congratulations, you can build shit.
+  options:
+    auto choose: true
+    priority: 201
+neophyte:
+  prerequisites:
+    in group:
+      value: neophyte
+  requirements:
+    time:
+      value: 4h
+    exp:
+      value: 5
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 100
+    mobs killed2:
+      value: 2;creeper
+  results:
+    command: say &p has just been promoted to Apprentice!
+    command2: give &p stone 100
+    command3: eco give &p 500
+    command4: lp user &p promote ranks
+    message: Congratulations, you are now an Apprentice.
+  options:
+    auto choose: true
+    priority: 202
+apprentice:
+  prerequisites:
+    in group:
+      value: apprentice
+  requirements:
+    time:
+      value: 12h
+    exp:
+      value: 10
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 150
+  results:
+    command: say &p has just been promoted to Novice!
+    command2: lp user &p promote ranks
+    message: Congratulations, you are now a Novice.
+  options:
+    auto choose: true
+    priority: 203
+novice:
+  prerequisites:
+    in group:
+      value: novice
+  requirements:
+    time:
+      value: 1d
+    exp:
+      value: 15
+    blocks moved:
+      value: 200000
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 300
+    mobs killed2:
+      value: 75;pillager
+    mobs killed3:
+      value: 3;Ravager
+  results:
+    command: say &p has just been promoted to Journeyman!
+    command2: lp user &p promote ranks
+    message: Congratulations, you are now a Journeyman.
+  options:
+    auto choose: true
+    priority: 204
+journeyman:
+  prerequisites:
+    in group:
+      value: journeyman
+  requirements:
+    time:
+      value: 2d
+    exp:
+      value: 20
+    items crafted:
+      value: 10000
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 1000
+  results:
+    command: say &p has just been promoted to Craftsman!
+    command2: lp user &p promote ranks
+    message: Congratulations, you are now a Craftsman.
+  options:
+    auto choose: true
+    priority: 205
+craftsman:
+  prerequisites:
+    in group:
+      value: craftsman
+  requirements:
+    time:
+      value: 4d
+    exp:
+      value: 25
+    world:
+      value: world_nether
+    world2:
+      value: world
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 1500
+    mobs killed2:
+      value: 25;ghast
+    mobs killed3:
+      value: 75;WITHER_SKELETON
+    mobs killed4:
+      value: 150;MAGMA_CUBE
+    mobs killed5:
+      value: 100;ZOMBIFIED_PIGLIN
+    mobs killed6:
+      value: 100;PIGLIN
+    mobs killed7:
+      value: 25;hoglin
+    mobs killed8:
+      value: 75;blaze
+    has advancement:
+      value: minecraft:nether/ride_strider;Ride a strider
+  results:
+    command: say &p has just been promoted to Adept!
+    command2: lp user &p promote ranks
+    message: Congratulations, you are now an Adept.
+  options:
+    auto choose: true
+    priority: 206
+adept:
+  prerequisites:
+    in group:
+      value: adept
+  requirements:
+    time:
+      value: 8d
+    exp:
+      value: 30
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 2500
+    mobs killed2:
+      value: 150;phantom
+    mobs killed3:
+      value: 300;drowned
+    mobs killed4:
+      value: 3;elder_guardian
+    mobs killed5:
+      value: 100;guardian
+  results:
+    command: say &p has just been promoted to Expert!
+    command2: lp user &p promote ranks
+    message: Congratulations, you are now an Expert.
+  options:
+    auto choose: true
+    priority: 207
+expert:
+  prerequisites:
+    in group:
+      value: expert
+  requirements:
+    time:
+      value: 16d
+    exp:
+      value: 40
+    gamemode:
+      value: 0
+    mobs killed:
+      value: 5000
+    mobs killed2:
+      value: 1500;skeleton
+    mobs killed3:
+      value: 1500;spider
+    mobs killed4:
+      value: 1500;zombie
+    mobs killed5:
+      value: 125;enderman
+    mobs killed6:
+      value: 125;slime
+    mobs killed7:
+      value: 175;witch
+    mobs killed8:
+      value: 50;vex
+    mobs killed9:
+      value: 50;vindicator
+    mobs killed10:
+      value: 75;evoker
+    mobs killed11:
+      value: 100;shulker
+    mobs killed12:
+      value: 50;silverfish
+  results:
+    command: say &p has just been promoted to Master!
+    command2: lp user &p promote ranks
+    message: Congratulations, you are now a Master.
+  options:
+    auto choose: true
+    priority: 208

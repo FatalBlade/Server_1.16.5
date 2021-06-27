@@ -1,0 +1,27 @@
+# aBroadcasts Config.
+# Drop me a PM if you need help.
+
+# The prefix the plugin uses for it's broadcasts.
+broadcastPrefix: "&b[aBroadcasts]"
+
+# The prefix for any regular messages (Chat commands, ect.).
+chatPrefix: "&b[aBroadcasts]"
+
+# --
+# Automated Broadcast Settings
+# --
+
+# The interval between each broadcast.
+broadcastInterval: 120
+
+# If true, instead of looping them, every time a broadcast is needed, it will select a random one. This has protection from saying the same one twice in a row.
+randomBroadcast: false
+
+# If true, broadcasts will be printed into the console too.
+broadcastIntoConsole: true
+
+# The broadcasts.
+broadcasts:
+    - This is a test announcement.
+    - This is the &csecond announcement!
+    - This is the third one.

@@ -1,0 +1,15 @@
+name: '&dMythic Hunter'
+type: KILL_MYTHIC
+permission-required: false
+leveling:
+  max-level: 100
+  start-exp: 50
+  money-multiplier: '1 + %lvl% / 100'
+  exp-formula: '%exp% * 1.17'
+list:
+  SkeletalKnight:
+    enabled: true
+    min-money: 30.0
+    max-money: 60.0
+    chance: 100.0
+    exp: 25

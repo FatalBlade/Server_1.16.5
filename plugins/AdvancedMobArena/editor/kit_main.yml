@@ -1,0 +1,189 @@
+title: 'Arena Kit Editor'
+size: 54
+content:
+  return:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 49
+    type: RETURN
+editor:
+  name:
+    material: NAME_TAG
+    name: '&eKit Name'
+    lore:
+    - '&bCurrent: &a%name%'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    slots: 4
+    type: KIT_CHANGE_NAME
+
+  kit-icon:
+    material: ITEM_FRAME
+    name: '&eKit Icon'
+    lore:
+    - '&cEdit icon manually in'
+    - '&ckit config file: &4%file%'
+    - '&7'
+    - '&bTips and examples are on'
+    - '&bplugin wiki: &ahttp://nexwiki.info'
+    slots: 13
+    type: NONE
+
+  equip-commands:
+    material: COMMAND_BLOCK
+    name: '&eKit Commands'
+    lore:
+    - '&bThe following commands will be'
+    - '&bexecuted when kit is selected:'
+    - '&a- %kit-commands%'
+    - '&7'
+    - '&6Left-Click: &eAdd Command'
+    - '&6Right-Click: &eClear'
+    slots: 10
+    type: KIT_CHANGE_COMMANDS
+
+  equip-potions:
+    material: BREWING_STAND
+    name: '&eKit Potion Effects'
+    lore:
+    - '&bThe following effects will be'
+    - '&bpermanently given to a player:'
+    - '&a- %kit-potions%'
+    - '&7'
+    - '&6Left-Click: &eAdd Potion'
+    - '&6Right-Click: &eClear'
+    slots: 19
+    type: KIT_CHANGE_POTIONS
+
+  equip-armor:
+    material: GOLDEN_CHESTPLATE
+    name: '&eKit Armor'
+    lore:
+    - '&bThese items will be equipped to'
+    - '&bplayer armor slots.'
+    - '&7'
+    - '&6Left-Click: &eManage'
+    item-flags:
+    - '*'
+    slots: 28
+    type: KIT_CHANGE_ARMOR
+
+  equip-inventory:
+    material: CHEST
+    name: '&eKit Inventory'
+    lore:
+    - '&bThese items will be equipped to'
+    - '&bplayer inventory slots.'
+    - '&7'
+    - '&6Left-Click: &eManage'
+    slots: 37
+    type: KIT_CHANGE_INVENTORY
+
+  req-permission:
+    material: REDSTONE_TORCH
+    name: '&ePermission Requirement'
+    lore:
+    - '&bRequired: &a%req-permission%'
+    - '&bNode: &a%permission%'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 16
+    type: KIT_CHANGE_REQ_PERMISSION
+
+  req-money:
+    material: REPEATER
+    name: '&eMoney Requirement'
+    lore:
+    - '&bMoney Required: &a$%req-money%'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    slots: 25
+    type: KIT_CHANGE_REQ_MONEY
+
+  req-kits:
+    material: COMPARATOR
+    name: '&eKits Requirement'
+    lore:
+    - '&bKits Required:'
+    - '&a- %req-kits%'
+    - '&7'
+    - '&6Left-Click: &eAdd Kit'
+    - '&6Right-Click: &eClear'
+    slots: 34
+    type: KIT_CHANGE_REQ_KITS
+
+  kit-default:
+    material: GRAY_DYE
+    animation:
+      auto-play: false
+      start-frame: 0
+      frames:
+        '0':
+          material: GRAY_DYE
+          name: '&eKit Default &7(No)'
+          lore:
+          - '&bThis kit is &cnot a default &bkit.'
+          - '&7'
+          - '&7Default kits are used to be force'
+          - '&7selected for players who didn''t select'
+          - '&7it manually in lobby.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '1':
+          material: LIME_DYE
+          name: '&eKit Default &7(Yes)'
+          lore:
+          - '&bThis kit is &adefault &bkit.'
+          - '&7'
+          - '&7Default kits are used to be force'
+          - '&7selected for players who didn''t select'
+          - '&7it manually in lobby.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+    slots: 43
+    type: KIT_CHANGE_DEFAULT
+
+armor:
+  title: 'Kit Armor Editor'
+  size: 9
+  armor-slots: '0,1,2,3'
+  content:
+    return:
+      material: BARRIER
+      name: '&c&lReturn (No Save)'
+      slots: 8
+      type: RETURN
+    order-note:
+      material: MAP
+      name: '&cArmor Order'
+      lore:
+      - '&bThe following order must be'
+      - '&bfollowed for correct armor applying:'
+      - '&aBoots &2→ &aLeggins &2→ &aChest &2→ &aHelmet'
+      slots: 6
+      type: NONE
+  editor:
+    saver:
+      material: EMERALD
+      name: '&a&lSave and Return'
+      slots: 7
+      type: KIT_SAVE
+
+inventory:
+  title: 'Kit Inventory Editor'
+  size: 45
+  item-slots: '0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35'
+  content:
+    return:
+      material: BARRIER
+      name: '&c&lReturn (No Save)'
+      slots: 39
+      type: RETURN
+  editor:
+    saver:
+      material: EMERALD
+      name: '&a&lSave and Return'
+      slots: 41
+      type: KIT_SAVE
+
+

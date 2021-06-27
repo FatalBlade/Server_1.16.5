@@ -1,0 +1,94 @@
+title: 'Arena Region Wave Settings'
+size: 36
+content:
+  return:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 31
+    type: RETURN
+
+editor:
+  priority:
+    material: REDSTONE
+    name: '&ePriority'
+    lore:
+    - '&bCurrent: &a%priority%'
+    - '&7'
+    - '&7Defines the wave priority.'
+    - '&7When multiple waves are being'
+    - '&7applied at the same time, the higher'
+    - '&7number will override.'
+    - '&7'
+    - '&7If some waves have the same priority,'
+    - '&7they all will be applied.'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+    slots: 11
+    type: IR_CHANGE_PRIORITY
+
+  interval:
+    material: REPEATER
+    name: '&eInterval'
+    lore:
+    - '&bCurrent: &a%interval%'
+    - '&7'
+    - '&7Defines how often (in waves) this'
+    - '&7wave will be spawned.'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+    - '&6Right-Click: &eDisable'
+    slots: 12
+    type: IR_CHANGE_INTERVAL
+
+  waves:
+    material: REDSTONE_TORCH
+    name: '&eStart, End, Skip Waves'
+    lore:
+    - '&bFrom Wave: &a%wave-start%'
+    - '&bTo Wave: &a%wave-end%'
+    - '&bIgnored Waves: &a%wave-skip%'
+    - '&7'
+    - '&7Defines the wave range of the wave.'
+    - '&7This wave will be spawned only'
+    - '&7when arena game is in specified wave range.'
+    - '&7'
+    - '&dSet value to &b-1 &dto make start/end'
+    - '&drange with no limit.'
+    - '&7'
+    - '&6Left-Click: &eEdit From'
+    - '&6Right-Click: &eEdit To'
+    - '&6Middle-Click: &eEdit Skip'
+    slots: 13
+    type: REGION_WAVE_CHANGE_WAVES
+
+  wave_id:
+    material: BOOK
+    name: '&eArena Wave Id'
+    lore:
+    - '&bWave Id: &a%wave-id%'
+    - '&7'
+    - '&7Defines the arena wave identifier.'
+    - '&7This wave will spawn all mobs from'
+    - '&7the specified arena wave.'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+    slots: 14
+    type: REGION_WAVE_CHANGE_ID
+
+  spawners:
+    material: SPAWNER
+    name: '&eSpawners'
+    lore:
+    - '&bMobs from this wave will be spawned'
+    - '&bat the following region spawners:'
+    - '&a- %spawners%'
+    - '&7'
+    - '&7You can create, edit and remove spawners'
+    - '&7in the region editor.'
+    - '&7'
+    - '&6Left-Click: &eAdd Spawner'
+    - '&6Right-Click: &eClear List'
+    slots: 15
+    type: REGION_WAVE_CHANGE_SPAWNERS
+
+

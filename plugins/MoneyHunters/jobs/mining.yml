@@ -1,0 +1,75 @@
+name: '&eMining'
+type: BLOCK_BREAK
+permission-required: true
+leveling:
+  max-level: 100
+  start-exp: 50
+  money-multiplier: '1 + %lvl% / 100'
+  exp-formula: '%exp% * 1.17'
+list:
+  stone:
+    enabled: true
+    min-money: 0.1
+    max-money: 0.2
+    chance: 30.0
+    exp: 1
+  andesite:
+    enabled: true
+    min-money: 0.1
+    max-money: 0.2
+    chance: 30.0
+    exp: 1
+  granite:
+    enabled: true
+    min-money: 0.1
+    max-money: 0.2
+    chance: 30.0
+    exp: 1
+  diorite:
+    enabled: true
+    min-money: 0.1
+    max-money: 0.2
+    chance: 30.0
+    exp: 1
+  coal_ore:
+    enabled: true
+    min-money: 9.0
+    max-money: 12.0
+    chance: 100.0
+    exp: 6
+  iron_ore:
+    enabled: true
+    min-money: 14.0
+    max-money: 16.0
+    chance: 100.0
+    exp: 9
+  gold_ore:
+    enabled: true
+    min-money: 20.0
+    max-money: 27.0
+    chance: 100.0
+    exp: 15
+  redstone_ore:
+    enabled: true
+    min-money: 17.0
+    max-money: 23.0
+    chance: 100.0
+    exp: 12
+  lapis_ore:
+    enabled: true
+    min-money: 17.0
+    max-money: 23.0
+    chance: 100.0
+    exp: 12
+  diamond_ore:
+    enabled: true
+    min-money: 48.0
+    max-money: 62.0
+    chance: 100.0
+    exp: 25
+  emerald_ore:
+    enabled: true
+    min-money: 83.0
+    max-money: 120.0
+    chance: 100.0
+    exp: 40

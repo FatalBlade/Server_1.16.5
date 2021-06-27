@@ -1,0 +1,112 @@
+title: 'Arena Waves Editor'
+size: 36
+
+content:
+  return:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 31
+    type: RETURN
+
+editor:
+  entity_limit:
+    material: COMPARATOR
+    name: '&eEntity Limit'
+    lore:
+    - '&bCurrent: &a%entity-limit%'
+    - '&7'
+    - '&7Defines the max. amount of'
+    - '&7living entities on the arena'
+    - '&7at the same time.'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    - '&6Right-Click: &eDisable'
+    slots: 10
+    type: WAVES_CHANGE_ENTITY_LIMIT
+
+  entity_autokill:
+    material: TNT
+    name: '&eEntity Auto-Kill'
+    lore:
+    - '&bCurrent: &a%entity-auto-kill%'
+    - '&7'
+    - '&7Automatically kills all mobs'
+    - '&7on the arena at the end of a wave.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 11
+    type: WAVES_CHANGE_ENTITY_AUTO_KILL
+
+  delay:
+    material: CLOCK
+    name: '&eWave Delay'
+    lore:
+    - '&bFirst: &a%delay-first%'
+    - '&bDefault: 7a%delay-default%'
+    - '&7'
+    - '&7Defines the delay before first'
+    - '&7and between next waves.'
+    - '&7'
+    - '&6Left-Click: &eChange First'
+    - '&6Right-Click: &eChange Default'
+    slots: 12
+    type: WAVES_CHANGE_DELAY
+
+  final_wave:
+    material: IRON_DOOR
+    name: '&eFinal Wave'
+    lore:
+    - '&bCurrent: &a%final-wave%'
+    - '&7'
+    - '&7When final wave is completed,'
+    - '&7the game will be finished.'
+    - '&7When disabled, the game will have'
+    - '&7no final and will be unlimited.'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    - '&6Right-Click: &eDisable'
+    slots: 13
+    type: WAVES_CHANGE_FINAL_WAVE
+
+  next_conditions:
+    material: REDSTONE
+    name: '&eNext Wave Conditions'
+    lore:
+    - '&bCurrent: &a<not editable>'
+    - '&7'
+    - '&7Defines the conditions to start'
+    - '&7a cooldown for a next wave.'
+    - '&7'
+    - '&6It''s not possible to edit in game.'
+    - '&6Please, edit &e.yml&6 arena config using tips'
+    - '&6from the &ehttp://nexwiki.info/ &6wiki.'
+    slots: 14
+    type: NONE
+
+  progression:
+    material: BREWING_STAND
+    name: '&eWave Progression'
+    lore:
+    - '&bAllows you to increase the'
+    - '&bgame difficulty by increasing'
+    - '&bmob levels and mob amount.'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 15
+    type: WAVES_CHANGE_PROGRESSION
+
+  waves:
+    material: BLAZE_POWDER
+    name: '&eWaves'
+    lore:
+    - '&bCreate arena waves here.'
+    - '&bThese waves are used in arena'
+    - '&bregion waves.'
+    - '&7'
+    - '&aBasically it''s a list of all waves'
+    - '&athat can be used on this arena in'
+    - '&adifferent arena regions.'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 16
+    type: WAVES_CHANGE_WAVES

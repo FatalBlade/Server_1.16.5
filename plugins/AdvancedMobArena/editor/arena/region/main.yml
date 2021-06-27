@@ -1,0 +1,132 @@
+title: 'Arena Region Editor'
+size: 54
+
+content:
+  back:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 49
+    type: RETURN
+
+  dummy_triggers:
+    material: CLOCK
+    name: '&eRegion Lock/Unlock Triggers'
+    lore:
+    - '&cEdit triggers manually in'
+    - '&cregion config file: &4%file%'
+    - '&7'
+    - '&bTips and examples are on'
+    - '&bplugin wiki: &ahttp://nexwiki.info'
+    slots: 24
+    type: NONE
+
+editor:
+  active:
+    material: GRAY_DYE
+    name: ''
+    animation:
+      auto-play: false
+      start-frame: 0
+      frames:
+        '0':
+          material: GRAY_DYE
+          name: '&8Inactive &7(Disabled)'
+          lore:
+          - '&7Region disabled by administrator.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '1':
+          material: PINK_DYE
+          name: '&cInactive &7(Error)'
+          lore:
+          - '&bRegion contains some problem(s) and'
+          - '&bcan not be enabled until it''s fixed:'
+          - '&c▸ &e%problem%'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '2':
+          material: LIME_DYE
+          name: '&aActive &7(Enabled)'
+          lore:
+          - '&bRegion does not contains any problems'
+          - '&band is ready to play!'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+    slots: 4
+    type: REGION_CHANGE_ACTIVE
+
+  name:
+    material: NAME_TAG
+    name: '&eRegion Name'
+    lore:
+    - '&bCurrent: &a%name%'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    slots: 20
+    type: REGION_CHANGE_NAME
+
+  setup-kit:
+    material: GOLDEN_AXE
+    name: '&eRegion Setup Kit'
+    lore:
+    - '&bUse this kit to define main'
+    - '&bregion settings and locations.'
+    - '&7'
+    - '&6Left-Click: &eGet Kit'
+    item-flags:
+    - '*'
+    slots: 22
+    type: REGION_SETUP_KIT
+
+  waves:
+    material: BLAZE_POWDER
+    name: '&eRegion Wave Manager'
+    lore:
+    - '&7List of waves to be spawned inside'
+    - '&7this region.'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 30
+    type: REGION_OPEN_WAVES
+
+  region-default:
+    material: GRAY_DYE
+    name: ''
+    animation:
+      auto-play: false
+      start-frame: 0
+      frames:
+        '0':
+          material: GRAY_DYE
+          name: '&8Region Default &7(No)'
+          lore:
+          - '&bRegion is &cnot default&b arena region.'
+          - '&7'
+          - '&7Default region defines the player'
+          - '&7spawn location on join.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '1':
+          material: LIME_DYE
+          name: '&aRegion Default &7(Yes)'
+          lore:
+          - '&bRegion is &adefault&b arena region.'
+          - '&7'
+          - '&7Default region defines the player'
+          - '&7spawn location on join.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+    slots: 31
+    type: REGION_CHANGE_DEFAULT
+
+  containers:
+    material: CHEST
+    name: '&eRegion Container Manager'
+    lore:
+    - '&cEdit containers manually in'
+    - '&cregion config file: &4%file%'
+    - '&7'
+    - '&bTips and examples are on'
+    - '&bplugin wiki: &ahttp://nexwiki.info'
+    slots: 32
+    type: REGION_OPEN_CONTAINERS

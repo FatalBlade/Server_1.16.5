@@ -1,0 +1,27 @@
+name: '&bFishing'
+type: FISHING
+permission-required: true
+leveling:
+  max-level: 100
+  start-exp: 50
+  money-multiplier: '1 + %lvl% / 100'
+  exp-formula: '%exp% * 1.17'
+list:
+  cod:
+    enabled: true
+    min-money: 8.0
+    max-money: 16.0
+    chance: 100.0
+    exp: 8
+  salmon:
+    enabled: true
+    min-money: 14.0
+    max-money: 22.0
+    chance: 100.0
+    exp: 14
+  pufferfish:
+    enabled: true
+    min-money: 15.0
+    max-money: 25.0
+    chance: 100.0
+    exp: 17

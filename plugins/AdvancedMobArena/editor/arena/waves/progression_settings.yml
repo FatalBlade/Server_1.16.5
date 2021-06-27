@@ -1,0 +1,101 @@
+title: 'Arena Wave Progression Editor'
+size: 36
+content:
+  return:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 31
+    type: RETURN
+
+editor:
+  priority:
+    material: REDSTONE
+    name: '&ePriority'
+    lore:
+    - '&bCurrent: &a%priority%'
+    - '&7'
+    - '&7Defines the progression priority.'
+    - '&7When multiple progressions are being'
+    - '&7applied at the same time, the higher'
+    - '&7number will override.'
+    - '&7'
+    - '&7If some progressions have the same priority,'
+    - '&7they both will be applied.'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+    slots: 11
+    type: IR_CHANGE_PRIORITY
+
+  interval:
+    material: REPEATER
+    name: '&eInterval'
+    lore:
+    - '&bCurrent: &a%interval%'
+    - '&7'
+    - '&7Defines how often (in waves) this'
+    - '&7progression will be applied.'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+    - '&6Right-Click: &eDisable'
+    slots: 12
+    type: IR_CHANGE_INTERVAL
+
+  waves:
+    material: REDSTONE_TORCH
+    name: '&eStart, End, Skip Waves'
+    lore:
+    - '&bFrom Wave: &a%wave-start%'
+    - '&bTo Wave: &a%wave-end%'
+    - '&bIgnored Waves: &a%wave-skip%'
+    - '&7'
+    - '&7Defines the wave range of progression.'
+    - '&7This progression will be active only'
+    - '&7when arena game is in specified wave range.'
+    - '&7'
+    - '&dSet value to &b-1 &dto make start/end'
+    - '&drange with no limit.'
+    - '&7'
+    - '&6Left-Click: &eEdit From'
+    - '&6Right-Click: &eEdit To'
+    - '&6Middle-Click: &eEdit Skip'
+    slots: 13
+    type: WAVES_CHANGE_PROGRESSION_WAVE
+
+  formulas:
+    material: BOOK
+    name: '&eFormulas'
+    lore:
+    - '&bLevel: &a%formula-level%'
+    - '&bAmount: &a%formula-amount%'
+    - '&7'
+    - '&7Defines the progression formulas.'
+    - '&7You can use any math expressions here.'
+    - '&7'
+    - '&dPlaceholders:'
+    - '&b- %wave%: &dArena wave number.'
+    - '&b- %players%: &dArena players amount.'
+    - '&7'
+    - '&6Left-Click: &eEdit Level'
+    - '&6Right-Click: &eEdit Amount'
+    slots: 14
+    type: WAVES_CHANGE_PROGRESSION_FORMULA
+
+  affected_mobs:
+    material: CREEPER_SPAWN_EGG
+    name: '&eAffected Mobs'
+    lore:
+    - '&bReversed: &a%mobs-reverse%'
+    - '&bThe following mobs are (un)affected'
+    - '&bby this progression settings:'
+    - '&a- %mobs%'
+    - '&7'
+    - '&7Defines the progression formulas.'
+    - '&7You can use any math expressions here.'
+    - '&7'
+    - '&6Left-Click: &eAdd Mob'
+    - '&6Right-Click: &eClear List'
+    - '&6Middle-Click: &eToggle Reverse'
+    slots: 15
+    type: WAVES_CHANGE_PROGRESSION_AFFECTED_MOBS
+
+

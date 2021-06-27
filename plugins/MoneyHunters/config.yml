@@ -1,0 +1,86 @@
+core:
+  command-aliases: moneyhunters,mh
+  lang: en
+  prefix: MoneyHunters
+data:
+  auto-save: 15
+  storage:
+    type: sqlite
+    username: none
+    password: none
+    host: none
+    database: none
+  purge:
+    enabled: false
+    days: 60
+  instant-save: false
+general:
+  round-decimals: false
+  protect-drop: true
+  save-block-data: true
+  cache-block-data: true
+  disable-on-mob-arena: false
+  ignore-piston-events: false
+  merge-money-items: true
+  world-blacklist:
+  - example_world
+  - another_world
+  gamemode-blacklist:
+  - CREATIVE
+  spawn-blacklist:
+  - EGG
+  - DISPENSE_EGG
+  - SPAWNER
+  - SPAWNER_EGG
+  - SLIME_SPLIT
+  region-blacklist:
+  - some_region
+  - my_region
+leveling:
+  enabled: false
+  firework-on-up: false
+money:
+  full-inventory-tick-task: 40
+  lost:
+    enabled: true
+    no-drop-item: false
+    chance: 100.0
+    min-percent: 1.0
+    max-percent: 5.0
+  item-by-amount:
+    '0':
+      name: '&e&l%money%$'
+      material: GOLD_NUGGET
+      enchanted: true
+      skull-hash: ''
+    '100':
+      name: '&e&l%money%$'
+      material: GOLD_INGOT
+      enchanted: true
+      skull-hash: ''
+    '1000':
+      name: '&e&l%money%$'
+      material: GOLD_BLOCK
+      enchanted: true
+      skull-hash: ''
+  multipliers:
+    vip: 2.0
+    premium: 3.0
+  boosters:
+    notify:
+      on-join: true
+      interval: 30
+    global:
+      boost-1:
+        days:
+        - Saturday
+        - Sunday
+        time: 15:00-18:00
+        jobs:
+        - hunting
+        multiplier:
+          exp: 1.25
+          money: 1.5
+sounds:
+  on-pickup: BLOCK_NOTE_BLOCK_BELL
+  level-up: ENTITY_PLAYER_LEVELUP

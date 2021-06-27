@@ -1,0 +1,85 @@
+title: 'Arena Spot Editor'
+size: 45
+content:
+  back:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 40
+    type: RETURN
+  dummy_triggers:
+    material: CLOCK
+    name: '&eSpot Triggers'
+    lore:
+    - '&cEdit triggers manually in'
+    - '&cspot config file: &4%file%'
+    - '&7'
+    - '&bTips and examples are on'
+    - '&bplugin wiki: &ahttp://nexwiki.info'
+    slots: 23
+    type: NONE
+editor:
+  active:
+    material: GRAY_DYE
+    name: ''
+    animation:
+      auto-play: false
+      start-frame: 0
+      frames:
+        '0':
+          material: GRAY_DYE
+          name: '&8Inactive &7(Disabled)'
+          lore:
+          - '&7Spot disabled by administrator.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '1':
+          material: PINK_DYE
+          name: '&cInactive &7(Error)'
+          lore:
+          - '&7Spot disabled due to error(s):'
+          - '&c▸ &e%problem%'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '2':
+          material: LIME_DYE
+          name: '&aActive &7(Enabled)'
+          lore:
+          - '&7Spot enabled and ready to use.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+    slots: 4
+    type: SPOT_CHANGE_ACTIVE
+  
+  name:
+    material: NAME_TAG
+    name: '&eSpot Name'
+    lore:
+    - '&bCurrent: &a%name%'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    slots: 19
+    type: SPOT_CHANGE_NAME
+
+  kit:
+    material: GOLDEN_AXE
+    name: '&eSpot Setup Kit'
+    lore:
+    - '&bUse this kit to define spot bounds.'
+    - '&7'
+    - '&6Left-Click: &eGet Kit'
+    item-flags:
+    - '*'
+    slots: 21
+    type: SPOT_SETUP_KIT
+
+  states:
+    material: ITEM_FRAME
+    name: '&eSpot States'
+    lore:
+    - '&bCreate different spot states here.'
+    - '&7'
+    - '&6Left-Click: &eManage'
+    slots: 25
+    type: SPOT_CHANGE_STATES
+
+

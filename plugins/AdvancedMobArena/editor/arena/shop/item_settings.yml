@@ -1,0 +1,92 @@
+title: 'Arena Shop Item Settings'
+size: 54
+content:
+  return:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 49
+    type: RETURN
+
+  dummy_unlock_triggers:
+    material: COMPARATOR
+    name: '&eUnlock Triggers'
+    lore:
+    - '&cEdit triggers manually in'
+    - '&cshop config file: &4%file%'
+    - '&7'
+    - '&bTips and examples are on'
+    - '&bplugin wiki: &ahttp://nexwiki.info'
+    slots: 6
+    type: NONE
+
+editor:
+  price:
+    material: GOLD_NUGGET
+    name: '&ePrice'
+    lore:
+    - '&bCurrent: &a$%price%'
+    - '&7'
+    - '&7Defines item price.'
+    - '&7'
+    - '&6Left-Click: &eEdit'
+    slots: 2
+    type: SHOP_PRODUCT_CHANGE_PRICE
+
+  preview:
+    material: ITEM_FRAME
+    name: '&eItem Preview'
+    lore:
+    - '&bCurrent: &a%preview%'
+    - '&7'
+    - '&7Defines the item that will'
+    - '&7be displayed in shop GUI.'
+    - '&7Use an item with name and lore'
+    - '&7to describe the product content.'
+    - '&7'
+    - '&6Drag & Drop: &eReplace'
+    slots: 13
+    type: SHOP_PRODUCT_CHANGE_PREVIEW
+
+  required_kits:
+    material: DIAMOND_CHESTPLATE
+    name: '&eRequired Kits'
+    lore:
+    - '&bThe following kits only'
+    - '&bare able to purchase this item:'
+    - '&2▸ &a%required-kits%'
+    - '&7'
+    - '&7Leave this list empty'
+    - '&7for no kit requirements.'
+    - '&7'
+    - '&6Left-Click: &eAdd Kit'
+    - '&6Right-Click: &eClear List'
+    item-flags:
+    - '*'
+    slots: 20
+    type: SHOP_PRODUCT_CHANGE_REQUIRED_KITS
+
+  product_items:
+    material: GOLDEN_HORSE_ARMOR
+    name: '&eItems'
+    lore:
+    - '&7Defines the items that'
+    - '&7will be given to a player'
+    - '&7when product is purchased.'
+    - '&7'
+    - '&6Left-Click: &eManage'
+    slots: 24
+    type: SHOP_PRODUCT_CHANGE_ITEMS
+
+  product_commands:
+    material: COMMAND_BLOCK
+    name: '&eCommands'
+    lore:
+    - '&bThe following commands will'
+    - '&bbe executed on purchase:'
+    - '&2▸ &a%commands%'
+    - '&7'
+    - '&6Left-Click: &eAdd Command'
+    - '&6Right-Click: &eClear List'
+    slots: 31
+    type: SHOP_PRODUCT_CHANGE_COMMANDS
+

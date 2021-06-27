@@ -1,0 +1,343 @@
+title: 'Arena Gameplay Editor'
+size: 54
+
+content:
+  return:
+    material: BARRIER
+    name: '&c&lReturn'
+    slots: 49
+    type: RETURN
+
+editor:
+  timeleft:
+    material: CLOCK
+    name: '&eArena Timeleft'
+    lore:
+    - '&bCurrent: &a%timeleft% min.'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    - '&6Right-Click: &eDisable'
+    slots: 10
+    type: GAMEPLAY_CHANGE_TIMELEFT
+
+  lobby_time:
+    material: REPEATER
+    name: '&eLobby Time'
+    lore:
+    - '&bCurrent: &a%lobby-time% sec.'
+    - '&7'
+    - '&7Defines the lobby time before'
+    - '&7the game starts.'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    slots: 11
+    type: GAMEPLAY_CHANGE_LOBBY_TIME
+
+  coins_multiplier:
+    material: SUNFLOWER
+    name: '&eCoins Multiplier'
+    lore:
+    - '&bCurrent: &ax%coins-multiplier%'
+    - '&7'
+    - '&7Defines the multiplier for'
+    - '&7arena coins dropped from mobs.'
+    - '&7'
+    - '&6Left-Click: &eChange'
+    - '&6Right-Click: &eDisable'
+    slots: 12
+    type: GAMEPLAY_CHANGE_COINS_MULTIPLIER
+
+  announces:
+    material: ENDER_EYE
+    name: '&eAnnounces'
+    lore:
+    - '&bEnabled: &a%announces-enabled%'
+    - '&7'
+    - '&7Enables/Disables arena start'
+    - '&7and end announces.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 13
+    type: GAMEPLAY_CHANGE_ANNOUNCES
+
+  scoreboard:
+    material: MAP
+    name: '&eScoreboard'
+    lore:
+    - '&bEnabled: &a%scoreboard-enabled%'
+    - '&7'
+    - '&7Enables/Disables arena scoreboard.'
+    - '&c&lProtocolLib &r&cis required!'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 14
+    type: GAMEPLAY_CHANGE_SCOREBOARD
+
+  shop:
+    material: EMERALD
+    name: '&eShop'
+    lore:
+    - '&bEnabled: &a%shop-enabled%'
+    - '&7'
+    - '&7Enables/Disables arena shop.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 15
+    type: GAMEPLAY_CHANGE_SHOP
+
+  hunger:
+    material: ROTTEN_FLESH
+    name: '&eHunger'
+    lore:
+    - '&bEnabled: &a%hunger-enabled%'
+    - '&7'
+    - '&7Enables/Disables saturation lose.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 16
+    type: GAMEPLAY_CHANGE_HUNGER
+
+  regeneration:
+    material: GOLDEN_APPLE
+    name: '&eRegeneration'
+    lore:
+    - '&bEnabled: &a%regeneration-enabled%'
+    - '&7'
+    - '&7Enables/Disables natural regeneration.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 19
+    type: GAMEPLAY_CHANGE_REGENERATION
+
+  item_drop:
+    material: CAULDRON
+    name: '&eItem Drop'
+    lore:
+    - '&bEnabled: &a%item-drop-enabled%'
+    - '&7'
+    - '&7Enables/Disables item drop.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 20
+    type: GAMEPLAY_CHANGE_ITEM_DROP
+
+  item_pickup:
+    material: HOPPER
+    name: '&eItem Pickup'
+    lore:
+    - '&bEnabled: &a%item-pickup-enabled%'
+    - '&7'
+    - '&7Enables/Disables item pickup.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 21
+    type: GAMEPLAY_CHANGE_ITEM_PICKUP
+
+  item_durability:
+    material: ANVIL
+    name: '&eItem Durability'
+    lore:
+    - '&bEnabled: &a%item-durability-enabled%'
+    - '&7'
+    - '&7Enables/Disables item durability.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 22
+    type: GAMEPLAY_CHANGE_ITEM_DURABILITY
+
+  chorus:
+    material: CHORUS_FRUIT
+    name: '&eChorus Usage'
+    lore:
+    - '&bEnabled: &a%chorus-enabled%'
+    - '&7'
+    - '&7Enables/Disables chorus usage.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 23
+    type: GAMEPLAY_CHANGE_CHORUS
+
+  ender_pearl:
+    material: ENDER_PEARL
+    name: '&eEnder Pearl Usage'
+    lore:
+    - '&bEnabled: &a%ender-pearl-enabled%'
+    - '&7'
+    - '&7Enables/Disables ender pearl usage.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 24
+    type: GAMEPLAY_CHANGE_ENDER_PEARL
+
+  slime_split:
+    material: SLIME_BALL
+    name: '&eSlime Split'
+    lore:
+    - '&bEnabled: &a%slime-split-enabled%'
+    - '&7'
+    - '&7Enables/Disables slime split on death.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 25
+    type: GAMEPLAY_CHANGE_SLIME_SPLIT
+
+  mob_drop_exp:
+    material: EXPERIENCE_BOTTLE
+    name: '&eMob Exp Drop'
+    lore:
+    - '&bEnabled: &a%mob-drop-exp-enabled%'
+    - '&7'
+    - '&7Enables/Disables mob exp drop.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 28
+    type: GAMEPLAY_CHANGE_MOB_DROP_EXP
+
+  mob_drop_items:
+    material: GUNPOWDER
+    name: '&eMob Items Drop'
+    lore:
+    - '&bEnabled: &a%mob-drop-items-enabled%'
+    - '&7'
+    - '&7Enables/Disables mob items drop.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 29
+    type: GAMEPLAY_CHANGE_MOB_DROP_ITEMS
+
+  players:
+    material: PLAYER_HEAD
+    name: '&ePlayer Options'
+    lore:
+    - '&bMin/Max Players: &a%players-min%/%players-max%'
+    - '&bLives: &a%players-lives%'
+    - '&bSave Exp: &a%players-save-exp%'
+    - '&7'
+    - '&7Defines min. and max. players on arena.'
+    - '&7Defines how many times player can die'
+    - '&7before being kicked from the game.'
+    - '&7Defines if player exp should be stacked'
+    - '&7with their current exp.'
+    - '&7'
+    - '&6Left-Click: &eChange Min'
+    - '&6Right-Click: &eChange Max'
+    - '&6Shift-Left: &eChange Lives'
+    - '&6Middle-Click: &eToggle Exp'
+    - ''
+    slots: 30
+    type: GAMEPLAY_CHANGE_PLAYERS
+
+  spectate:
+    material: SKELETON_SKULL
+    name: '&eSpectate Options'
+    lore:
+    - '&bEnabled: &a%spectate-enabled%'
+    - '&bAfter Death: &a%spectate-after-death%'
+    - '&7'
+    - '&7Enables/Disables spectate feature.'
+    - '&7Enables/Disables auto-spectate after death.'
+    - '&7'
+    - '&6Left-Click: &eToggle Enabled'
+    - '&6Right-Click: &eToggle After Death'
+    slots: 31
+    type: GAMEPLAY_CHANGE_SPECTATE
+
+  commands:
+    material: COMMAND_BLOCK
+    name: '&eCommands'
+    lore:
+    - '&bEnabled: &a%commands-enabled%'
+    - '&7'
+    - '&7Enables/Disables usage of non-arena commands.'
+    - '&7'
+    - '&bThe following commands will be'
+    - '&ballowed to execute on arena:'
+    - '&a- %commands-whitelist%'
+    - '&7'
+    - '&6Left-Click: &eToggle Enabled'
+    - '&6Shift-Left: &eAdd to Whitelist'
+    - '&6Shift-Right: &eClear Whitelist'
+    slots: 32
+    type: GAMEPLAY_CHANGE_COMMANDS
+
+  kits:
+    material: DIAMOND_CHESTPLATE
+    name: '&eKit Options'
+    lore:
+    - '&bEnabled: &a%kits-enabled%'
+    - '&7'
+    - '&7Enables/Disables kits feature.'
+    - '&7When disabled, players will use their own items.'
+    - '&7'
+    - '&bThe following kits are allowed:'
+    - '&a- %kits-allowed%'
+    - '&7'
+    - '&7Defines list of kits that are allowed to'
+    - '&7use on this arena. Use &e* &7to include all kits.'
+    - '&7'
+    - '&bThe following kits has a limited usage:'
+    - '&a- %kits-limits-name%: &2x%kits-limits-amount%'
+    - '&7'
+    - '&7Defines the max. amount of players with that kit.'
+    - '&7'
+    - '&6Middle-Click: &eToggle Enabled'
+    - '&6Left-Click: &eAdd Allowed Kit'
+    - '&6Right-Click: &eClear Allowed List'
+    - '&6Shift-Left: &eAdd Kit Limit'
+    - '&6Shift-Right: &eClear Limit List'
+    item-flags:
+    - '*'
+    slots: 33
+    type: GAMEPLAY_CHANGE_KITS
+
+  compat_pets:
+    material: DRAGON_HEAD
+    name: '&e[Compat] Pets'
+    lore:
+    - '&bEnabled: &a%compat-pets-enabled%'
+    - '&7'
+    - '&7Enables/Disables pets from plugins on the arena.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    slots: 34
+    type: GAMEPLAY_CHANGE_COMPAT_PETS
+
+  compat_mcmmo:
+    material: DIAMOND_SWORD
+    name: '&e[Compat] mcMMO'
+    lore:
+    - '&bEnabled: &a%compat-mcmmo-enabled%'
+    - '&7'
+    - '&7Enables/Disables mcMMO skills on the arena.'
+    - '&7'
+    - '&6Left-Click: &eToggle'
+    item-flags:
+    - '*'
+    slots: 37
+    type: GAMEPLAY_CHANGE_COMPAT_MCMMO
+
+  auto_commands:
+    material: DAYLIGHT_DETECTOR
+    name: '&eAuto Commands'
+    lore:
+    - '&7Allows you to execute commands'
+    - '&7after certain arena events.'
+    - '&7'
+    - '&bCommands to execute on start:'
+    - '&a- %auto-commands-start%'
+    - '&7'
+    - '&bCommands to execute on end:'
+    - '&a- %auto-commands-end%'
+    - '&7'
+    - '&bCommands to execute on wave start:'
+    - '&a- %auto-commands-wave-start%'
+    - '&7'
+    - '&bCommands to execute on wave end:'
+    - '&a- %auto-commands-wave-end%'
+    - '&7'
+    - '&6Left-Click: &eEdit Start Commands'
+    - '&6Right-Click: &eEdit End Commands'
+    - '&6Shift-Left: &eEdit Wave Start Commands'
+    - '&6Shift-Right: &eEdit Wave End Commands'
+    slots: 38
+    type: GAMEPLAY_CHANGE_AUTO_CMD

@@ -1,0 +1,78 @@
+# 
+# lore blacklist. If a player tries to put an item in the multitool and the tool has any of
+# these lores, it wont be able to be added.
+# These lores don't need to match the line exactly.
+# ex: If the tool has "&bhello" as a lore, you can put "he" to blacklist it.
+droptoolsondeath: false
+lore-blacklist:
+- blacklisted-lore
+- '&a&lanother-lore'
+toolinv:
+  68b32198-f1c8-3a5e-9fb0-ea85c427d12c:
+    a:
+      itemstack:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GRAY_STAINED_GLASS_PANE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Put
+            Sword Here"}],"text":""}'
+          ItemFlags:
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+    b:
+      itemstack:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GRAY_STAINED_GLASS_PANE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Put
+            Pickaxe Here"}],"text":""}'
+          ItemFlags:
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+    c:
+      itemstack:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GRAY_STAINED_GLASS_PANE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Put
+            Axe Here"}],"text":""}'
+          ItemFlags:
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+    d:
+      itemstack:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: GRAY_STAINED_GLASS_PANE
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Put
+            Shovel Here"}],"text":""}'
+          ItemFlags:
+          - HIDE_UNBREAKABLE
+          Unbreakable: true
+    e:
+      itemstack:
+        ==: org.bukkit.inventory.ItemStack
+        v: 2586
+        type: FEATHER
+        meta:
+          ==: ItemMeta
+          meta-type: UNSPECIFIC
+          display-name: '{"extra":[{"bold":true,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"green","text":"Multitool"}],"text":""}'
+          lore:
+          - '{"extra":[{"bold":false,"italic":false,"underlined":false,"strikethrough":false,"obfuscated":false,"color":"aqua","text":"Click
+            this feather to generate your Multitool."}],"text":""}'
+          ItemFlags:
+          - HIDE_UNBREAKABLE
+          Unbreakable: true

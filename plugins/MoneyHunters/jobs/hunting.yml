@@ -1,0 +1,351 @@
+name: '&eHunting'
+type: KILL_ENTITY
+permission-required: false
+leveling:
+  max-level: 100
+  start-exp: 50
+  money-multiplier: '1 + %lvl% / 100'
+  exp-formula: '%exp% * 1.17'
+list:
+  bat:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  blaze:
+    enabled: true
+    min-money: 20.0
+    max-money: 27.0
+    chance: 100.0
+    exp: 14
+  cave_spider:
+    enabled: true
+    min-money: 15.0
+    max-money: 17.0
+    chance: 100.0
+    exp: 12
+  chicken:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  cod:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 2
+  cow:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  creeper:
+    enabled: true
+    min-money: 25.0
+    max-money: 32.0
+    chance: 100.0
+    exp: 10
+  dolphin:
+    enabled: true
+    min-money: 1.5
+    max-money: 2.0
+    chance: 100.0
+    exp: 2
+  donkey:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  drownred:
+    enabled: true
+    min-money: 4.5
+    max-money: 9.0
+    chance: 100.0
+    exp: 7
+  elder_guardian:
+    enabled: true
+    min-money: 500.0
+    max-money: 1000.0
+    chance: 100.0
+    exp: 500
+  ender_dragon:
+    enabled: true
+    min-money: 500.0
+    max-money: 1000.0
+    chance: 100.0
+    exp: 500
+  enderman:
+    enabled: true
+    min-money: 15.0
+    max-money: 22.0
+    chance: 100.0
+    exp: 12
+  endermite:
+    enabled: true
+    min-money: 3.0
+    max-money: 5.0
+    chance: 100.0
+    exp: 4
+  evoker:
+    enabled: true
+    min-money: 75.0
+    max-money: 100.0
+    chance: 100.0
+    exp: 8
+  ghast:
+    enabled: true
+    min-money: 50.0
+    max-money: 75.0
+    chance: 100.0
+    exp: 9
+  giant:
+    enabled: true
+    min-money: 20.0
+    max-money: 30.0
+    chance: 100.0
+    exp: 20
+  guardian:
+    enabled: true
+    min-money: 15.0
+    max-money: 17.0
+    chance: 100.0
+    exp: 9
+  horse:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  husk:
+    enabled: true
+    min-money: 15.5
+    max-money: 19.0
+    chance: 100.0
+    exp: 7
+  illusioner:
+    enabled: true
+    min-money: 100.0
+    max-money: 150.0
+    chance: 100.0
+    exp: 8
+  iron_golem:
+    enabled: true
+    min-money: 6.0
+    max-money: 12.0
+    chance: 100.0
+    exp: 8
+  llama:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  magma_cube:
+    enabled: true
+    min-money: 6.0
+    max-money: 10.0
+    chance: 100.0
+    exp: 6
+  mule:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  mushroom_cow:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  ocelot:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  parrot:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  phantom:
+    enabled: true
+    min-money: 10.0
+    max-money: 17.0
+    chance: 100.0
+    exp: 13
+  pig:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  zombified_piglin:
+    enabled: true
+    min-money: 6.0
+    max-money: 12.0
+    chance: 100.0
+    exp: 9
+  polar_bear:
+    enabled: true
+    min-money: 5.0
+    max-money: 9.5
+    chance: 100.0
+    exp: 8
+  pufferfish:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  rabbit:
+    enabled: true
+    min-money: 1.0
+    max-money: 3.0
+    chance: 100.0
+    exp: 2
+  salmon:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  sheep:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  shulker:
+    enabled: true
+    min-money: 15.0
+    max-money: 27.0
+    chance: 100.0
+    exp: 7
+  silverfish:
+    enabled: true
+    min-money: 5.0
+    max-money: 7.0
+    chance: 100.0
+    exp: 4
+  skeleton:
+    enabled: true
+    min-money: 15.0
+    max-money: 22.0
+    chance: 100.0
+    exp: 9
+  skeleton_horse:
+    enabled: true
+    min-money: 4.0
+    max-money: 6.0
+    chance: 100.0
+    exp: 2
+  slime:
+    enabled: true
+    min-money: 4.0
+    max-money: 8.0
+    chance: 100.0
+    exp: 5
+  snowman:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  spider:
+    enabled: true
+    min-money: 4.5
+    max-money: 9.0
+    chance: 100.0
+    exp: 6
+  squid:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  stray:
+    enabled: true
+    min-money: 25.0
+    max-money: 32.0
+    chance: 100.0
+    exp: 9
+  turtle:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  vex:
+    enabled: true
+    min-money: 35.0
+    max-money: 45.0
+    chance: 100.0
+    exp: 4
+  villager:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 1
+  vindicator:
+    enabled: true
+    min-money: 45.0
+    max-money: 65.0
+    chance: 100.0
+    exp: 8
+  witch:
+    enabled: true
+    min-money: 20.0
+    max-money: 35.0
+    chance: 100.0
+    exp: 10
+  wither:
+    enabled: true
+    min-money: 1000.0
+    max-money: 5000.0
+    chance: 100.0
+    exp: 500
+  wither_skeleton:
+    enabled: true
+    min-money: 35.0
+    max-money: 43.0
+    chance: 100.0
+    exp: 10
+  wolf:
+    enabled: true
+    min-money: 1.0
+    max-money: 2.0
+    chance: 100.0
+    exp: 2
+  zombie:
+    enabled: true
+    min-money: 4.5
+    max-money: 9.0
+    chance: 100.0
+    exp: 7
+  zombie_villager:
+    enabled: true
+    min-money: 4.5
+    max-money: 9.0
+    chance: 100.0
+    exp: 7
+  zombie_horse:
+    enabled: true
+    min-money: 2.0
+    max-money: 4.0
+    chance: 100.0
+    exp: 2
+  piglin:
+    enabled: true
+    min-money: 7.0
+    max-money: 15.0
+    chance: 100.0
+    exp: 9

@@ -1,0 +1,34 @@
+title: 'Arena Editor'
+size: 45
+content:
+  exit:
+    material: BARRIER
+    name: '&cExit'
+    slots: 40
+    type: EXIT
+editor:
+  arena:
+    material: SPAWNER
+    name: '&dArena Manager'
+    lore:
+    - '&6Left-Click: &eOpen'
+    slots: 10
+    type: EDITOR_ARENA
+
+  kits:
+    material: GOLDEN_CHESTPLATE
+    name: '&eKit Manager'
+    lore:
+    - '&6Left-Click: &eOpen'
+    item-flags:
+    - '*'
+    slots: 13
+    type: EDITOR_KITS
+
+  mobs:
+    material: CREEPER_SPAWN_EGG
+    name: '&aMobs Manager'
+    lore:
+    - '&cEditor is not working yet.'
+    slots: 16
+    type: EDITOR_MOBS

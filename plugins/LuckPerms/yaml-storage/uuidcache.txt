@@ -1,0 +1,6 @@
+# LuckPerms UUID lookup cache
+2184ed77-7322-43a5-81f3-3510d6a9c8be:Czernobogg
+89ad0f34-7405-3f09-a0f1-b3032ea29a47:Swordm1993
+68b32198-f1c8-3a5e-9fb0-ea85c427d12c:ArealAdmin
+a841e7af-fb17-4ead-b3fd-cd22c7ed88ac:agamernamedian
+d6abdbe1-d442-3bbe-b455-ea6c08ddb198:Blazer545

@@ -1,0 +1,104 @@
+title: 'Arena Editor'
+size: 54
+content:
+  back:
+    material: BARRIER
+    name: '&cReturn'
+    slots: 49
+    type: RETURN
+editor:
+  active:
+    material: ANVIL
+    name: ''
+    animation:
+      auto-play: false
+      start-frame: 0
+      frames:
+        '0':
+          material: GRAY_DYE
+          name: '&8Inactive &7(Disabled)'
+          lore:
+          - '&7Arena disabled by administrator.'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '1':
+          material: PINK_DYE
+          name: '&cInactive &7(Error)'
+          lore:
+          - '&bArena contains some problem(s) and'
+          - '&bcan not be enabled until it''s fixed:'
+          - '&c▸ &e%problem%'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+        '2':
+          material: LIME_DYE
+          name: '&aActive &7(Enabled)'
+          lore:
+          - '&bArena does not contains any problems'
+          - '&band is ready to play!'
+          - '&7'
+          - '&6Left-Click: &eToggle'
+    slots: 4
+    type: ARENA_CHANGE_ACTIVE
+
+  gameplay:
+    material: EXPERIENCE_BOTTLE
+    name: '&aGameplay Manager'
+    lore:
+    - '&c&l(!) &e%problem-gameplay%'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 20
+    type: OPEN_GAMEPLAY_MANAGER
+
+  waves:
+    material: BLAZE_POWDER
+    name: '&eWaves Manager'
+    lore:
+    - '&c&l(!) &e%problem-waves%'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 30
+    type: OPEN_WAVE_MANAGER
+
+  setup-kit:
+    material: GOLDEN_AXE
+    name: '&6Arena Setup Kit'
+    lore:
+    - '&bUse this kit to define the arena locations.'
+    - '&7'
+    - '&6Left-Click: &eGet Kit'
+    item-flags:
+    - '*'
+    slots: 22
+    type: ARENA_SETUP_KIT
+
+  regions:
+    material: COMPASS
+    name: '&bRegion Manager'
+    lore:
+    - '&c&l(!) &e%problem-regions%'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 24
+    type: OPEN_REGION_MANAGER
+
+  shop:
+    material: EMERALD
+    name: '&aShop Manager'
+    lore:
+    - '&c&l(!) &e%problem-shop%'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 32
+    type: OPEN_SHOP_MANAGER
+
+  spots:
+    material: REDSTONE
+    name: '&dSpot Manager'
+    lore:
+    - '&c&l(!) &e%problem-spots%'
+    - '&7'
+    - '&6Left-Click: &eOpen'
+    slots: 28
+    type: OPEN_SPOT_MANAGER
